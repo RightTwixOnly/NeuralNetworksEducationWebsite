@@ -86,13 +86,15 @@ real = [1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1];//answer key for if the day is
 
 //function  to create a perceptron
 function start(){
-    meteorologist = new Perceptron(4);
+    meteorologist = new Perceptron(4);//create perceptron with 4 weights
 }
 
+//one iteration
 function iterate(){
-    meteorologist.train(forecast, real, 250);
-    console.log(meteorologist.test());
-    console.log(meteorologist.accuracyScore(real))
+    meteorologist.train(forecast, real, 250);//train with the forecast, the answer key, and # of iterations
+    //console.log(meteorologist.test()); delete this later
+    //console.log(meteorologist.accuracyScore(real)) delete this later
+    //display on the webpage, weights, accuracy and bias
     document.getElementById('weights').innerHTML = "Weights after 250 iterations:" + meteorologist.weights
     document.getElementById('accuracy').innerHTML = "Accuracy after 250 iterations:" + (meteorologist.accuracyScore(real))
     document.getElementById('bias').innerHTML = "Bias after 250 iterations:" + (meteorologist.bias)
@@ -101,6 +103,4 @@ function iterate(){
 
 //[1, 0, 1, 0, 0, 1, 1]
 //for (let i in (forecast.length)){
-
-
 //console.log(brain.accuracyScore(test))
