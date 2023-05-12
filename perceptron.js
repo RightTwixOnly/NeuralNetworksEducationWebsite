@@ -100,7 +100,21 @@ function iterate(){
     document.getElementById('accuracy').innerHTML = "Accuracy after 250 iterations:" + (meteorologist.accuracyScore(real))
     document.getElementById('bias').innerHTML = "Bias after 250 iterations:" + (meteorologist.bias)
     document.getElementById('robot').innerHTML = " "
-    
+    //update the prediction table
+    document.getElementById('w1d1').innerHTML = "y=0"+"\nyHat="+meteorologist.results[0]
+    document.getElementById('w1d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[1]
+    document.getElementById('w1d3').innerHTML = "y=0"+"\nyHat="+meteorologist.results[2]
+    document.getElementById('w1d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[3]
+    document.getElementById('w1d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[4]
+    document.getElementById('w1d6').innerHTML = "y=0"+"\nyHat="+meteorologist.results[5]
+    document.getElementById('w1d7').innerHTML = "y=0"+"\nyHat="+meteorologist.results[6]
+    document.getElementById('w2d1').innerHTML = "y=0"+"\nyHat="+meteorologist.results[7]
+    document.getElementById('w2d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[8]
+    document.getElementById('w2d3').innerHTML = "y=0"+"\nyHat="+meteorologist.results[9]
+    document.getElementById('w2d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[10]
+    document.getElementById('w2d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[11]
+    document.getElementById('w2d6').innerHTML = "y=0"+"\nyHat="+meteorologist.results[12]
+    document.getElementById('w2d7').innerHTML = "y=0"+"\nyHat="+meteorologist.results[13]
 }
 
 
