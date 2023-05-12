@@ -55,9 +55,13 @@
 </aside>
 
 <!--Title and Introduction Section-->
-<section id ="intro">
-  <h1>A Look Behind The Curtain</h1>
-  <p>INTRODUCTION HERE</p>
+<section>
+  <h1 id ="intro">A Look Behind The Curtain</h1>
+  <p>Intro Hook
+     Neural Networks are inspired by the human brain, A computer learns to make more intelligent
+     decisions by using interconnected nodes in a layer structure resembling the neuron structures in the human brain.
+
+  </p>
 </section>
 <!--Text Section-->
 <section>
@@ -105,7 +109,44 @@
   <!--Interactive Perceptron-->
   <h1 id="perceptron">Perceptron Example and How it works</h1>
   <p>
-    <br>paragraph
+    The Perceptron is one of the simplest ANN architectures. It's based on a slightly different
+    artificial neuron known as a "Threshold Logic Unit" (TLU). Instead of binary on/off values
+    for the input and output it is numbers instead. Each input is also associated with a weight. Then the TLU
+    computes a weighted sum of its inputs (Sum = w1*x1 + w2*x2 + w3*x3 + ... + wn+xn). The this
+    sum is put into either a step function or a signum function. The output is the result of the sum put into the function.
+    PICTURE OF WHOLE PROCESS HERE
+
+    Typically when you start using a perceptron by default you set the weights to 0 and the accuracy of the predictions
+    is not great. To fix this issue the perceptron is trained which basically just involves finding the right weight values using a training algorithm.
+    For every prediction incorrect the training algorithm updates the weight values of perceptron.
+    How does the weight update? 
+    It updates through the use of a formula (wi = wi,j + lr(yi-yhati)*xi).
+    To give more context before explaining the meaning of the values, this formula is used for each weight for as many times as there were wrong predictions. 
+    Also each weight from a previous use of the formula carries on over to the next use of the formula
+    
+    wi represents which weight is being changed
+    wi,j represents the previous weight
+    lr represents the learning rate
+    yi represents the target response
+    yhat represents the predicted response
+    xi represents the respective weights' corresponding input value.
+
+    
+    
+
+    <!-- Insert The perceptron model above -->
+    <br>How does this perceptron model work? 
+        As you can see this perceptron model has four binary inputs (X1,X2,X3,X4)
+        
+        X1 representing the Overcast of the day has a range of -2 - 1 where -2 is lightning storm, -1 is a rainstorm, 0 is cloudy and 1 is sunny
+        X2 is pretty self-explanatory representing Temperature in Fahreheit
+        X3 is the Windyness of the day with a range of 1 - 3 with 1 representing 0-10 mph, 2 representing 11-20 mph windspeed and 3 representing Windspeed over 21 mph
+        X4 represents the amount of precipitation expected in millimeters. 
+
+        with 0 representing no and 1 representing yes it is nice enough to take a walk.
+
+
+      <! Write about how we just made a computer basically do the same calculations we do when we wake up and look at the weather app and decided whether it's going to be a nice day or not
     <br>paragraph
     <br>paragraph
     <br>paragraph
@@ -115,8 +156,8 @@
     <br>paragraph
   </p>
 
-  <!--AI Produced Art Uses Explanation-->
-  <h1 id="art">AI Produced Art</h1>
+  <!--Multilayering-->
+  <h1 id="layering">Multilayer ANNs</h1>
   <p>
     <br>paragraph
     <br>paragraph
@@ -128,31 +169,6 @@
     <br>paragraph
   </p>
 
-  <!--Image Classification Uses Explanation-->
-  <h1 id="image">Image Classification</h1>
-  <p>
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-  </p>
-
-  <!--ChatGPT Explanation-->
-  <h1 id="chatgpt">ChatGPT</h1>
-  <p>
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-  </p>
 
 
 </section>
