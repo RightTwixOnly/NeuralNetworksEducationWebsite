@@ -87,6 +87,7 @@ real = [1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1];//answer key for if the day is
 //function  to create a perceptron
 function start(){
     meteorologist = new Perceptron(4);//create perceptron with 4 weights
+    document.getElementById('robot').innerHTML = "New robo-meteorologist created!"
 }
 
 //one iteration
@@ -98,6 +99,8 @@ function iterate(){
     document.getElementById('weights').innerHTML = "Weights after 250 iterations:" + meteorologist.weights
     document.getElementById('accuracy').innerHTML = "Accuracy after 250 iterations:" + (meteorologist.accuracyScore(real))
     document.getElementById('bias').innerHTML = "Bias after 250 iterations:" + (meteorologist.bias)
+    document.getElementById('robot').innerHTML = " "
+    
 }
 
 
