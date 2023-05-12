@@ -1,9 +1,9 @@
 //F-function whether it is nice out or not
 function Func(x){
     if (x >= 0){
-        return 1;
+        return 1;//nice outside
     }else{
-        return 0;
+        return 0;//not nice outside
     }
 }
 
@@ -75,12 +75,19 @@ class Perceptron {
 }
 
 forecast = [[75, 1, 0, 1], [98, 3, 0, 1], [70, 1, 0.3, 0], [60, 2, 7.0, -1], [75, 3, 3.0, -2], [80, 2, 0.3, 0], [80, 1, 0, 1]];
-//[1, 0, 1, 0, 0, 1, 1]
 test = [1, 0, 1, 0, 0, 1, 1];
-brain = new Perceptron(4);
+
+function start(){
+    brain = new Perceptron(4);
+    brain.train(forecast, test, 2900);
+    console.log(brain.test());
+    console.log(brain.accuracyScore(test))
+    document.write(brain.accuracyScore(test))
+}
+
+
+//[1, 0, 1, 0, 0, 1, 1]
 //for (let i in (forecast.length)){
-console.log(brain.train(forecast, test, 2900));
-console.log(brain.accuracyScore(test))
-console.log(brain.test());
+
 
 //console.log(brain.accuracyScore(test))
