@@ -109,6 +109,8 @@
   <!--Interactive Perceptron-->
   <h1 id="perceptron">Perceptron Example and How it works</h1>
   <p>
+    NOTES ABOUT BIAS
+    ALLOWS THE MODEL TO MOVE AROUND MORE THAN JUST THE WEIGHTS 
     The Perceptron is one of the simplest ANN architectures. It's based on a slightly different
     artificial neuron known as a "Threshold Logic Unit" (TLU). Instead of binary on/off values
     for the input and output it is numbers instead. Each input is also associated with a weight. Then the TLU
@@ -123,13 +125,20 @@
     It updates through the use of a formula (wi = wi,j + lr(yi-yhati)*xi).
     To give more context before explaining the meaning of the values, this formula is used for each weight for as many times as there were wrong predictions. 
     Also each weight from a previous use of the formula carries on over to the next use of the formula
-    
+    #TALK ABOUT BIAS
+
     wi represents which weight is being changed
     wi,j represents the previous weight
     lr represents the learning rate
     yi represents the target response
     yhat represents the predicted response
     xi represents the respective weights' corresponding input value.
+
+    A Perceptron does not always have to be binary classifications, it can also achieve multi-class classification by
+    adding more output layers to match the multiple classes possible.
+    PICTURE OF MULTICLASSIFICATION PERCEPTRON HERE
+
+    Next we'll show a binary classifying perceptron example to help illustrate the ideas discussed.
 
     
     
@@ -150,10 +159,15 @@
     <br>paragraph
     <br>paragraph
     <br>paragraph
+    <br> While the perceptron is very simple and decent at classification it still has many problems solving some simple problems.
+         Take the Exclusive OR classification problem for example. 
+         Picture of the problem here. 
+         A Single layer Perceptron can not solve this problem.
+         However some of the limitations of a Single-layer Perceptron are fixed by stacking multiple perceptrons resulting in 
+         Multi-layer (MLP). A MLP for example can solve the Exclusive OR Problem by.
     <br>paragraph
     <br>paragraph
-    <br>paragraph
-    <br>paragraph
+    <br> Moving onto multi-layering
   </p>
 
   <!--Multilayering-->
