@@ -56,6 +56,7 @@ class Perceptron {
                     }          
                 }  
             }
+            this.iterations += 1
         }
         return this.results//return the results after (iterations)
     }
@@ -80,7 +81,7 @@ class Perceptron {
 //forecast of a week of days, each day contains (in order), [temp, wind, mm rain, overcast]
 //wind: 1-3, 1: little to no wind, 2: moderate wind, 3: very windy
 //overcast: -2.0-1.0: -2: stormy, -1: rainy, 0: cloudy, 1: sunny
-forecast = [[75, 1, 0, 1], [98, 3, 0, 1], [70, 1, 0.3, 0], [60, 2, 7.0, -1], [75, 3, 3.0, -2], [80, 2, 0.3, 0], [80, 1, 0, 1], [72, 2, 0, 1], [44, 0, 0, 3], [59, 3, 6.3, -2], [52, 1, 3.2, -1], [55, 2, 1.5, -1], [60, 3, 0, 1], [69, 1, 0, 1]];
+forecast = [[75, 1, 0, 1], [98, 3, 0, 1], [70, 1, 0.3, 0], [60, 2, 7.0, -1], [75, 3, 3.0, -2], [80, 2, 0.3, 0], [80, 1, 0, 1], [72, 2, 0, 1], [40, 3, 0, 0], [59, 3, 6.3, -2], [52, 1, 3.2, -1], [55, 2, 1.5, -1], [60, 3, 0, 1], [69, 1, 0, 1]];
 
 real = [1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1];//answer key for if the day is nice or not
 
@@ -96,25 +97,26 @@ function iterate(){
     //console.log(meteorologist.test()); delete this later
     //console.log(meteorologist.accuracyScore(real)) delete this later
     //display on the webpage, weights, accuracy and bias
-    document.getElementById('weights').innerHTML = "Weights after 250 iterations:" + meteorologist.weights
-    document.getElementById('accuracy').innerHTML = "Accuracy after 250 iterations:" + (meteorologist.accuracyScore(real))
-    document.getElementById('bias').innerHTML = "Bias after 250 iterations:" + (meteorologist.bias)
-    document.getElementById('robot').innerHTML = " "
+    document.getElementById('iterations').innerHTML = "Iterations: " + Math.round(((meteorologist.iterations) + Number.EPSILON) * 100) / 100;
+    document.getElementById('weights').innerHTML = "Weights: " + Math.round(((meteorologist.weights[0]) + Number.EPSILON) * 100) / 100 + ", " + Math.round(((meteorologist.weights[1]) + Number.EPSILON) * 100) / 100 + ", " + Math.round(((meteorologist.weights[2]) + Number.EPSILON) * 100) / 100 + ", " + Math.round(((meteorologist.weights[3]) + Number.EPSILON) * 100) / 100;
+    document.getElementById('accuracy').innerHTML = "Accuracy: " + Math.round(((meteorologist.accuracyScore(real)) + Number.EPSILON) * 100) / 100 + "%";
+    document.getElementById('bias').innerHTML = "Bias: " + Math.round(((meteorologist.bias) + Number.EPSILON) * 100) / 100;
+    document.getElementById('robot').innerHTML = " ";
     //update the prediction table
-    document.getElementById('w1d1').innerHTML = "y=0"+"\nyHat="+meteorologist.results[0]
-    document.getElementById('w1d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[1]
-    document.getElementById('w1d3').innerHTML = "y=0"+"\nyHat="+meteorologist.results[2]
-    document.getElementById('w1d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[3]
-    document.getElementById('w1d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[4]
-    document.getElementById('w1d6').innerHTML = "y=0"+"\nyHat="+meteorologist.results[5]
-    document.getElementById('w1d7').innerHTML = "y=0"+"\nyHat="+meteorologist.results[6]
-    document.getElementById('w2d1').innerHTML = "y=0"+"\nyHat="+meteorologist.results[7]
-    document.getElementById('w2d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[8]
-    document.getElementById('w2d3').innerHTML = "y=0"+"\nyHat="+meteorologist.results[9]
-    document.getElementById('w2d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[10]
-    document.getElementById('w2d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[11]
-    document.getElementById('w2d6').innerHTML = "y=0"+"\nyHat="+meteorologist.results[12]
-    document.getElementById('w2d7').innerHTML = "y=0"+"\nyHat="+meteorologist.results[13]
+    document.getElementById('w1d1').innerHTML = "y=1"+"\nyHat="+meteorologist.results[0];
+    document.getElementById('w1d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[1];
+    document.getElementById('w1d3').innerHTML = "y=1"+"\nyHat="+meteorologist.results[2];
+    document.getElementById('w1d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[3];
+    document.getElementById('w1d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[4];
+    document.getElementById('w1d6').innerHTML = "y=1"+"\nyHat="+meteorologist.results[5];
+    document.getElementById('w1d7').innerHTML = "y=1"+"\nyHat="+meteorologist.results[6];
+    document.getElementById('w2d1').innerHTML = "y=1"+"\nyHat="+meteorologist.results[7];
+    document.getElementById('w2d2').innerHTML = "y=0"+"\nyHat="+meteorologist.results[8];
+    document.getElementById('w2d3').innerHTML = "y=0"+"\nyHat="+meteorologist.results[9];
+    document.getElementById('w2d4').innerHTML = "y=0"+"\nyHat="+meteorologist.results[10];
+    document.getElementById('w2d5').innerHTML = "y=0"+"\nyHat="+meteorologist.results[11];
+    document.getElementById('w2d6').innerHTML = "y=1"+"\nyHat="+meteorologist.results[12];
+    document.getElementById('w2d7').innerHTML = "y=1"+"\nyHat="+meteorologist.results[13];
 }
 
 

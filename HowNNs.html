@@ -160,23 +160,23 @@
       </tr>
       <tr><!--Week 1 ROW-->
         <th>Week 1:</th>
-        <td><div id="w1d1"></div></td>
-        <td><div id="w1d2"></div></td>
-        <td><div id="w1d3"></div></td>
-        <td><div id="w1d4"></div></td>
-        <td><div id="w1d5"></div></td>
-        <td><div id="w1d6"></div></td>
-        <td><div id="w1d7"></div></td>
+        <td><div id="w1d1"></div><img src="sunny.png" alt="sunny"><br>75°<br>0mm rain/hr<br><img src="wind.png" alt="wind"></td><!--75°, 1 windy, 0mm, sunny-->
+        <td><div id="w1d2"></div><img src="sunny.png" alt="sunny"><br>98°<br>0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td><!--98°, 3 windy, 0mm, sunny-->
+        <td><div id="w1d3"></div><img src="cloudy.png" alt="cloudy"><br>70°<br>0.3mm rain/hr<br><img src="wind.png" alt="wind"></td><!--70°, 1 windy, 0.3mm, cloudy-->
+        <td><div id="w1d4"></div><img src="rainy.png" alt="rainy"><br>60°<br>7.0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td><!--60°, 2 windy, 7.0mm, rainy-->
+        <td><div id="w1d5"></div><img src="stormy.png" alt="stormy"><br>75°<br>3.0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td><!--75°, 3 windy, 3.0mm, stormy-->
+        <td><div id="w1d6"></div><img src="cloudy.png" alt="cloudy"><br>80°<br>0.3mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td><!--80°, 2 windy, 0.3mm, cloudy-->
+        <td><div id="w1d7"></div><img src="sunny.png" alt="sunny"><br>80°<br>0mm rain/hr<br><img src="wind.png" alt="wind"></td><!--80°, 1 windy, 0mm, sunny-->
       </tr>
       <tr><!--Week 2 ROW-->
         <th>Week 2:</th>
-        <td><div id="w2d1"></div></td>
-        <td><div id="w2d2"></div></td>
-        <td><div id="w2d3"></div></td>
-        <td><div id="w2d4"></div></td>
-        <td><div id="w2d5"></div></td>
-        <td><div id="w2d6"></div></td>
-        <td><div id="w2d7"></div></td>
+        <td><div id="w2d1"></div><img src="sunny.png" alt="sunny"><br>72°<br>0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d2"></div><img src="cloudy.png" alt="cloudy"><br>44°<br>0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d3"></div><img src="stormy.png" alt="stormy"><br>59°<br>6.3mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d4"></div><img src="rainy.png" alt="rainy"><br>52°<br>3.2mm rain/hr<br><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d5"></div><img src="rainy.png" alt="rainy"><br>55°<br>1.5mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d6"></div><img src="sunny.png" alt="sunny"><br>60°<br>0mm rain/hr<br><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"><img src="wind.png" alt="wind"></td>
+        <td><div id="w2d7"></div><img src="sunny.png" alt="sunny"><br>69°<br>0mm rain/hr<br><img src="wind.png" alt="wind"></td>
       </tr>
 
     </table>
@@ -192,6 +192,7 @@
     <!--Load the perceptron code-->
     <script src="perceptron.js"></script>
 
+    <div id='iterations'></div><!--Display the iteration count-->
     <div id="bias"></div><!--Display the bias-->
     <div id='weights'></div><!--Display the weights-->
     <div id='accuracy'></div><!--Display the accuracy-->
