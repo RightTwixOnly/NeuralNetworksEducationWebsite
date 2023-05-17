@@ -49,9 +49,9 @@
   <br>
   <a href="#intro">Introduction to how ANNs work</a> <br>
   <a href="#background">Background to how ANNs work</a> <br>
-  <a href="#structure">The Structures of ANNs</a> <br>
   <a href="#perceptron">Perceptron Example</a> <br>
   <a href="#layering">Multilayering ANNs</a> <br>
+  <a href="#layering">Other Neural Networks Examples</a> <br>
 </aside>
 
 <!--Title and Introduction Section-->
@@ -74,7 +74,11 @@
   <p>The first documented case of this innovation being advanced upon was when the forefathers of Neural Networks: Warren McCulloch and Walter Pitts proposed a very simple artificial neuron. 
     This artificial neuron consisted of one or more binary (on/off) inputs and one binary output. The output of the neuron operates when enough of its inputs are triggered. 
     Even with such a simple neuron model it is possible to perform some logical computations:
+    <br>
     <!--INSERT PIC-->
+    <img src="ANNs-performing-simple-logical-computations-2.png" alt="logic">
+    <br>
+    <small>Source: https://www.researchgate.net/figure/ANNs-performing-simple-logical-computations-2_fig2_351547862 </small>
     <br>
     Seeing how this is a neuron from the mid 1950s it’s natural for the current artificial neurons to have improved. 
     Generally artificial neurons add together the values of its inputs and if this value is above a threshold it sends its own signal to its output which is further received by other neurons
@@ -85,7 +89,11 @@
     Typically the training process involves adjusting the weight values so that the final product of the network is correct. 
     Usually this is in the form of using a method known as Gradient Descent. 
     To explain in the a vague but easy to understand way basically a neural network makes small changes to weights and biases to create small improvements and keeps doing this until it can’t improve anymore:
+    <br>
     <!--INSERT PIC-->
+    <img src="Trainingloop.png" alt="training">
+    <br>
+    <small>Source: https://towardsdatascience.com/the-beginners-glossary-of-neural-network-terms-a9617354078 </small>
     <br>
     In short, ANNS are a stack (group/chain) of simple learning algorithms (neurons) that  process the input, and then produce an output. 
     This embodies the idea of deep learning by design, as each layer of neurons learns a more refined understanding of the input.
@@ -231,6 +239,8 @@
     The next step involves measuring how much error contribution came from each connection at a lower layer using the chain rule until the algorithm reaches the input layer. This backwards pass method efficiently measures the error gradient across all connection weights by using error gradient backward through the network.
     Finally the algorithm performs a gradient descent step to change all the weights in the network using the error gradients. 
     <br>
+    <img src="backpropagation.png" alt="backprog">
+    <br>
     CREDIT to Aurelion Geron’s explanation of backpropagation in a relatively simple way.
     If you want to see a much better explanation of backpropagation but in a much more complex way here is an article for you.
     <!--INSERT LINK-->
@@ -245,8 +255,10 @@
     <br>
     Everything from this page mostly refers to a “feed-forward” type neural network, there are multiple different types and classes of neural networks that we unfortunately do not have the time to touch upon. 
     However we feel there are two other classes of Neural Networks that are worth touching upon, Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs).
-    Here’s a graph from the Levity.ai blog that helps illustrate some differences between regular ANNs, CNNs, and RNNS:
-    <!--INSET PIC-->
+    Here's a table to give a very very basic idea of some of the abilities and differences between the neural networks.
+    <!--INSERT PIC-->
+    <br>
+    <img src="OtherNNs.png" alt="OtherNN">
   </p>
 
 </section>
