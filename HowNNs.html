@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
+          height: 100%;
+          padding: 0;
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
         }
 
         h1{
-          position:relative; left: 100px
+          position:relative; left: 80px
         }
 
-        hr{
+        #imgcenter{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        hr.new1{
           text-align:center;
-          width: 1350px;
+          width: 1210px;
+        }
+        hr.new2{
+          text-align:center;
+          width: 1210px;
         }
 
         .topnav {
@@ -38,59 +50,59 @@
         }
         
         .topnav a.active {
-          background-color: #0367c594;
+          background-color: #0c86f894;
           color: white;
         }
         #pBox1 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
-         height: 90px;
+         width: 1200px;
+         height: 75px;
         }
         #pBox2 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
-         height: 1200px; 
+         width: 1200px;
+         height: 1000px; 
         }
         #pBox3 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
-         height: 300px;
+         width: 1200px;
+         height: 850px;
         }
         #pBox4 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
+         width: 1200px;
          height: 300px;
         }
         #pBox5 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
-         height: 800px;
+         width: 1200px;
+         height: 790px;
         }
         #pBox6 {
-         position:relative; left: 100px;
+         position:relative; left: 80px;
          border-radius: 8px;
          background: #bdbdbd;
          padding: 10px; 
-         width: 1300px;
+         width: 1200px;
          height: 450px;
         }
         .source{
-          position:relative; left: 650px;
+          position:relative; left: 560px;
           color: #0c60afc5;
           font-size:small;
         }
@@ -107,6 +119,7 @@
         <a href="Refs.html#refs">Acknowledgements/Further Resources</a>
     </nav>
 <!--Uses of NNs hyperlinks-->
+<!-- MESSES UP STYLIZING HARDCORE + REDUNDANT IMO
 <aside style="float:right;">
   <br>
   <a href="#intro">Introduction to how ANNs work</a> <br>
@@ -115,11 +128,11 @@
   <a href="#layering">Multilayering ANNs</a> <br>
   <a href="#layering">Other Neural Networks Examples</a> <br>
 </aside>
-
+-->
 <!--Title and Introduction Section-->
 <section>
   <h1 id ="intro">A Look Behind The Curtain</h1>
-  <hr>
+  <hr class="new1">
   <p id="pBox1">
     "Birds inspired us to fly, burdock plants inspired velcro, and countless more inventions were inspired by nature. It seems only logical, then, to look at the brain's
     architecture for inspiration on how to build an intelligent machine." - Aurelion Geron.
@@ -134,13 +147,16 @@
 
   <!--Explanation on how some ANNS work (Likely Brief)-->
   <h1 id="background">Background on how ANNS work</h1>
-  <hr>
+  <hr class = "new2">
   <p id="pBox2">The first documented case of this innovation being advanced upon was when the forefathers of Neural Networks: Warren McCulloch and Walter Pitts proposed a very simple artificial neuron. 
     This artificial neuron consisted of one or more binary (on/off) inputs and one binary output. The output of the neuron operates when enough of its inputs are triggered. 
     Even with such a simple neuron model it is possible to perform some logical computations:
     <br>
+    <br>
     <!--INSERT PIC-->
-    <img src="ANNs-performing-simple-logical-computations-2.png" alt="logic">
+    <img id = "imgcenter" src="ANNs-performing-simple-logical-computations-2.png" alt="logic"
+    width = "600"
+    length = "500">
     <br>
     <span class="source">Source: https://www.researchgate.net/figure/ANNs-performing-simple-logical-computations-2_fig2_351547862 </span>
     <br>
@@ -153,9 +169,11 @@
     Typically the training process involves adjusting the weight values so that the final product of the network is correct. 
     Usually this is in the form of using a method known as Gradient Descent. 
     To explain in the a vague but easy to understand way basically a neural network makes small changes to weights and biases to create small improvements and keeps doing this until it can’t improve anymore:
-    <br>
+    <br> <br>
     <!--INSERT PIC-->
-    <img src="Trainingloop.png" alt="training">
+    <img id = "imgcenter" src="Trainingloop.png" alt="training"
+      width = "900"
+      length = "800">
     <br>
     <span class="source">Source: https://towardsdatascience.com/the-beginners-glossary-of-neural-network-terms-a9617354078 </span>
     
@@ -167,43 +185,41 @@
 
   <!--Interactive Perceptron-->
   <h1 id="perceptron">Perceptron Example and How it works</h1>
+  <hr class = "new2">
   <p id="pBox3">
-    NOTES ABOUT BIAS
-    ALLOWS THE MODEL TO MOVE AROUND MORE THAN JUST THE WEIGHTS 
-    The Perceptron is one of the simplest ANN architectures. It's based on a slightly different
-    artificial neuron known as a "Threshold Logic Unit" (TLU). Instead of binary on/off values
-    for the input and output it is numbers instead. Each input is also associated with a weight. Then the TLU
-    computes a weighted sum of its inputs (Sum = w1*x1 + w2*x2 + w3*x3 + ... + wn+xn). The this
+    The Perceptron is one of the simplest ANN architectures. It's based on a slightly different artificial neuron known as a "Threshold Logic Unit" (TLU). 
+    Instead of binary on/off values for the input and output it is numbers instead. 
+    <br> <br>
+    Most inputs are associated with a weight value. However sometimes a perceptron/neural network may include an input not associated with a weight value: a bias value. 
+    This bias value allows for a neural network to move more than just its weights to maximize accuracy. 
+    <br>
+    Then the TLU computes a weighted sum of all of its inputs including bias (Sum = w1*x1 + w2*x2 + w3*x3 + ... + wn+xn + b). Then this
     sum is put into either a step function or a signum function. The output is the result of the sum put into the function.
-    PICTURE OF WHOLE PROCESS HERE
-
-    Typically when you start using a perceptron by default you set the weights to 0 and the accuracy of the predictions
+    <br> <br>
+    <img id = "imgcenter" src="Perceptron.png" alt="perceptron" width = "600"
+    length ="400">
+    <br> <br> 
+    Typically when you start using a perceptron by default you set the weights and bias to 0 and the accuracy of the predictions
     is not great. To fix this issue the perceptron is trained which basically just involves finding the right weight values using a training algorithm.
-    For every prediction incorrect the training algorithm updates the weight values of perceptron.
-    How does the weight update? 
-    It updates through the use of a formula (wi = wi,j + lr(yi-yhati)*xi).
-    To give more context before explaining the meaning of the values, this formula is used for each weight for as many times as there were wrong predictions. 
-    Also each weight from a previous use of the formula carries on over to the next use of the formula
-    #TALK ABOUT BIAS
+    Following the Gradient Descent method, for every prediction incorrect the training algorithm updates the weight values and bias value of the perceptron.
+    <br>
+    <br>
+    How do these values update exactly? 
+    The weight updates through the use of the formula: (wi = wj + lr(y-yhat)*x) amd to update the bias: (b = bj + lr(y-yhat)
+    <br><br>
+       wi represents which weight is being changed <br>
+       wj represents the previous weight (may equal 0 on the first pass of the formula) <br>
+       lr represents the learning rate <br>
+       y represents the target response <br>
+       yhat represents the predicted response <br>
+       x represents the respective weights' corresponding input value. <br>
+       bj representing the previous bias value (may equal 0 on first pass) <br> <br>
 
-    wi represents which weight is being changed
-    wi,j represents the previous weight
-    lr represents the learning rate
-    yi represents the target response
-    yhat represents the predicted response
-    xi represents the respective weights' corresponding input value.
-
-    A Perceptron does not always have to be binary classifications, it can also achieve multi-class classification by
-    adding more output layers to match the multiple classes possible.
-    PICTURE OF MULTICLASSIFICATION PERCEPTRON HERE
-
-    Next we'll show a binary classifying perceptron example to help illustrate the ideas discussed.
-
-    A Perceptron does not always have to be binary classifications, it can also achieve multi-class classification by
-    adding more output layers to match the multiple classes possible.
-    PICTURE OF MULTICLASSIFICATION PERCEPTRON HERE
-
-    Next we'll show a binary classifying perceptron example to help illustrate the ideas discussed.
+      These formulas are used for each weight and bias for as many times as there were errors in the output. 
+      Also each weight from a previous use of the formula carries on over to the next use of the formula
+      <br> <br>
+       Next we'll show a working perceptron example to help illustrate the ideas discussed.
+    
   </p>
     <!--PERCEPTRON SECTION-->
     <table>
@@ -256,7 +272,7 @@
     <div id='weights'></div><!--Display the weights-->
     <div id='accuracy'></div><!--Display the accuracy-->
     <!-- Insert The perceptron model above -->
-
+    <hr class = "new2">
     <p id= "pBox4">
       How does this perceptron model work? 
         As you can see this perceptron model has four binary inputs (X1,X2,X3,X4)
@@ -286,6 +302,7 @@
 
   <!--Multilayering-->
   <h1 id="layering">Multilayer ANNs</h1>
+  <hr class = "new2">
   <p id = "pBox5">
     While linear problems are no problem for a single-layer perceptron the performance of the perceptron on more complex non-linear problems was a huge roadblock for the advancement of ANNs. 
     To solve these more complex problems a neural network needs more than just one layer of neurons. The multiple layers added are referred to as “hidden” layers, since it does not constitute the input or output layer. 
@@ -293,6 +310,7 @@
     <br>
     What makes implementing multilayer neural networks more challenging is that these networks require much more than a simple gradient descent algorithm to train its weights. 
     What finally got the development of Neural Networks over this hump was the introduction of a “backpropagation algorithm”. As Aurelion Geron in Hands-On Machine Learning describes it “in short it is simply Gradient Descent using an efficient technique to compute the gradients automatically” in regards to every single model parameter. 
+    <br>
     <br>
     This algorithm involves one training set at a time and it sends the full training set multiple times to the first hidden layer. 
     The Algorithm then computes the output of all the neurons in this layer and passes it onto the next layer until it reaches the output layer 
@@ -304,17 +322,23 @@
     The next step involves measuring how much error contribution came from each connection at a lower layer using the chain rule until the algorithm reaches the input layer. This backwards pass method efficiently measures the error gradient across all connection weights by using error gradient backward through the network.
     Finally the algorithm performs a gradient descent step to change all the weights in the network using the error gradients. 
     <br>
-    <img src="backpropagation.png" alt="backprog">
+    <img id = "imgcenter" src="backpropagation.png" alt="backprog"
+    width = "500"
+    length = "300">
     <br>
-    CREDIT to Aurelion Geron’s explanation of backpropagation in a relatively simple way.
+    Credit to Aurelion Geron’s explanation of backpropagation in a relatively simple way.
     If you want to see a much better explanation of backpropagation but in a much more complex way here is an article for you.
+    <br>
     <!--INSERT LINK-->
+    https://towardsdatascience.com/understanding-backpropagation-abcc509ca9d0
+    <br>
     <br>
     Now with a way to properly train weights implementing a multilayer neural network is possible and viable.
   </p>
 
   <!--Last Addition-->
   <h1 id="other">Other Neural Networks</h1>
+  <hr class = "new2">
   <p id="pBox6">
     Before you're done learning about the basics of Neural Networks we felt it was valueable to at least introduce some other neural networks to you
     <br>
@@ -323,7 +347,7 @@
     Here's a table to give a very very basic idea of some of the abilities and differences between the neural networks.
     <!--INSERT PIC-->
     <br>
-    <img src="OtherNNs.png" alt="OtherNN">
+    <img id = "imgcenter" src="OtherNNs.png" alt="OtherNN">
   </p>
 
 </section>
