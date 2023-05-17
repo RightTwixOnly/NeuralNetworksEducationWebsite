@@ -8,6 +8,17 @@
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
         }
+
+        h1{
+          text-align:center
+        }
+        hr.new2{
+          text-align:center;
+          width: 1210px;
+        }
+        h2{
+          text-align:center
+        }
         
         .topnav {
           overflow: hidden;
@@ -29,15 +40,24 @@
         }
         
         .topnav a.active {
-          background-color: #04AA6D;
+          background-color: #0c86f894;
           color: white;
         }
+        #pBox1 {
+         position:relative; left: 20px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1200px;
+         height: 75px;
+        }
+
         </style>
     
 </head>
 
 
-<body>
+<body style="background-color:rgb(218, 243, 243);">
     <div class="topnav">
         <a href="index.html#home">Home</a>
         <a href="HowNNs.html#how">How ANNs work</a>
@@ -45,10 +65,26 @@
         <a class="active" href="Refs.html#refs">Acknowledgements/Further Resources</a>
 </div>
 <section id="mainDiv">
-    <h1 id="headline"> -Acknowledgements and Further Resources- </h1>
+    <h1 id="headline"> Acknowledgements and Further Resources </h1>
+    <hr class = "new2">
     <div id= "MainWrapper">
-        <h2 id="headline_h2">Intro</h2>
-        <p id="paragraph"> Hello Dane Stensland </p>
+        <p> <b>CREDIT TO THESE BOOKS: Worth checking out if you have a interest to learn more about Neural Networks </b>
+          <br> <br>
+          <ol type = "1">
+            <li id="book1">
+              Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurelion Geron
+              <a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291">Link</a>
+            </li>
+            <li id="book2">
+              Neural Networks and Deep Learning: A Textbook by Charu C. Aggarwal
+              <a href="https://www.amazon.com/Neural-Networks-Deep-Learning-Textbook/dp/3319944622">Link</a>
+            </li>
+            <li id="Article 1"> 
+              IBM's article "What are neural networks"
+              <a href="https://www.ibm.com/topics/neural-networks">Link</a>
+            </li>
+          </ol>
+        </p>
     </div>
 </section>
 
