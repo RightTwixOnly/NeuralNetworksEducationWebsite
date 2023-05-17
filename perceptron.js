@@ -81,7 +81,7 @@ class Perceptron {
 //forecast of a week of days, each day contains (in order), [temp, wind, mm rain, overcast]
 //wind: 1-3, 1: little to no wind, 2: moderate wind, 3: very windy
 //overcast: -2.0-1.0: -2: stormy, -1: rainy, 0: cloudy, 1: sunny
-forecast = [[75, 1, 0, 1], [98, 3, 0, 1], [70, 1, 0.3, 0], [60, 2, 7.0, -1], [75, 3, 3.0, -2], [80, 2, 0.3, 0], [80, 1, 0, 1], [72, 2, 0, 1], [40, 3, 0, 0], [59, 3, 6.3, -2], [52, 1, 3.2, -1], [55, 2, 1.5, -1], [60, 3, 0, 1], [69, 1, 0, 1]];
+forecast = [[75, 1, 0, 1], [98, 3, 0, 1], [70, 1, 0.3, 0], [60, 2, 7.0, -1], [75, 3, 3.0, -2], [80, 2, 0.3, 0], [80, 1, 0, 1], [72, 2, 0, 1], [30, 3, 0, 0], [59, 3, 6.3, -2], [52, 1, 3.2, -1], [55, 2, 1.5, -1], [60, 3, 0, 1], [69, 1, 0, 1]];
 
 real = [1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1];//answer key for if the day is nice or not
 
