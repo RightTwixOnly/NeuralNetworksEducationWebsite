@@ -8,7 +8,16 @@
           margin: 0;
           font-family: Arial, Helvetica, sans-serif;
         }
-        
+
+        h1{
+          position:relative; left: 100px
+        }
+
+        hr{
+          text-align:center;
+          width: 1350px;
+        }
+
         .topnav {
           overflow: hidden;
           background-color: #333;
@@ -31,6 +40,59 @@
         .topnav a.active {
           background-color: #0367c594;
           color: white;
+        }
+        #pBox1 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 90px;
+        }
+        #pBox2 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 1200px; 
+        }
+        #pBox3 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 300px;
+        }
+        #pBox4 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 300px;
+        }
+        #pBox5 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 800px;
+        }
+        #pBox6 {
+         position:relative; left: 100px;
+         border-radius: 8px;
+         background: #bdbdbd;
+         padding: 10px; 
+         width: 1300px;
+         height: 450px;
+        }
+        .source{
+          position:relative; left: 650px;
+          color: #0c60afc5;
+          font-size:small;
         }
     </style>
     
@@ -57,28 +119,30 @@
 <!--Title and Introduction Section-->
 <section>
   <h1 id ="intro">A Look Behind The Curtain</h1>
-  <p>
+  <hr>
+  <p id="pBox1">
     "Birds inspired us to fly, burdock plants inspired velcro, and countless more inventions were inspired by nature. It seems only logical, then, to look at the brain's
     architecture for inspiration on how to build an intelligent machine." - Aurelion Geron.
     <br>
     This is the key idea behind the innovation known as ANNs or Artificial Neural Networks.
  
 
-  </p>
+  </p >
 </section>
 <!--Text Section-->
 <section>
 
   <!--Explanation on how some ANNS work (Likely Brief)-->
   <h1 id="background">Background on how ANNS work</h1>
-  <p>The first documented case of this innovation being advanced upon was when the forefathers of Neural Networks: Warren McCulloch and Walter Pitts proposed a very simple artificial neuron. 
+  <hr>
+  <p id="pBox2">The first documented case of this innovation being advanced upon was when the forefathers of Neural Networks: Warren McCulloch and Walter Pitts proposed a very simple artificial neuron. 
     This artificial neuron consisted of one or more binary (on/off) inputs and one binary output. The output of the neuron operates when enough of its inputs are triggered. 
     Even with such a simple neuron model it is possible to perform some logical computations:
     <br>
     <!--INSERT PIC-->
     <img src="ANNs-performing-simple-logical-computations-2.png" alt="logic">
     <br>
-    <small>Source: https://www.researchgate.net/figure/ANNs-performing-simple-logical-computations-2_fig2_351547862 </small>
+    <span class="source">Source: https://www.researchgate.net/figure/ANNs-performing-simple-logical-computations-2_fig2_351547862 </span>
     <br>
     Seeing how this is a neuron from the mid 1950s it’s natural for the current artificial neurons to have improved. 
     Generally artificial neurons add together the values of its inputs and if this value is above a threshold it sends its own signal to its output which is further received by other neurons
@@ -93,7 +157,8 @@
     <!--INSERT PIC-->
     <img src="Trainingloop.png" alt="training">
     <br>
-    <small>Source: https://towardsdatascience.com/the-beginners-glossary-of-neural-network-terms-a9617354078 </small>
+    <span class="source">Source: https://towardsdatascience.com/the-beginners-glossary-of-neural-network-terms-a9617354078 </span>
+    
     <br>
     In short, ANNS are a stack (group/chain) of simple learning algorithms (neurons) that  process the input, and then produce an output. 
     This embodies the idea of deep learning by design, as each layer of neurons learns a more refined understanding of the input.
@@ -102,7 +167,7 @@
 
   <!--Interactive Perceptron-->
   <h1 id="perceptron">Perceptron Example and How it works</h1>
-  <p>
+  <p id="pBox3">
     NOTES ABOUT BIAS
     ALLOWS THE MODEL TO MOVE AROUND MORE THAN JUST THE WEIGHTS 
     The Perceptron is one of the simplest ANN architectures. It's based on a slightly different
@@ -139,7 +204,7 @@
     PICTURE OF MULTICLASSIFICATION PERCEPTRON HERE
 
     Next we'll show a binary classifying perceptron example to help illustrate the ideas discussed.
-
+  </p>
     <!--PERCEPTRON SECTION-->
     <table>
       <tr><!--ROW1 for week/day and days header-->
@@ -192,8 +257,8 @@
     <div id='accuracy'></div><!--Display the accuracy-->
     <!-- Insert The perceptron model above -->
 
-
-    <br>How does this perceptron model work? 
+    <p id= "pBox4">
+      How does this perceptron model work? 
         As you can see this perceptron model has four binary inputs (X1,X2,X3,X4)
         
         X1 representing the Overcast of the day has a range of -2 - 1 where -2 is lightning storm, -1 is a rainstorm, 0 is cloudy and 1 is sunny
@@ -221,7 +286,7 @@
 
   <!--Multilayering-->
   <h1 id="layering">Multilayer ANNs</h1>
-  <p>
+  <p id = "pBox5">
     While linear problems are no problem for a single-layer perceptron the performance of the perceptron on more complex non-linear problems was a huge roadblock for the advancement of ANNs. 
     To solve these more complex problems a neural network needs more than just one layer of neurons. The multiple layers added are referred to as “hidden” layers, since it does not constitute the input or output layer. 
     When an ANN has a large amount of hidden layers it’s called a “Deep Neural Network” hence the field of Deep Learning involves these ANNs.
@@ -250,7 +315,7 @@
 
   <!--Last Addition-->
   <h1 id="other">Other Neural Networks</h1>
-  <p>
+  <p id="pBox6">
     Before you're done learning about the basics of Neural Networks we felt it was valueable to at least introduce some other neural networks to you
     <br>
     Everything from this page mostly refers to a “feed-forward” type neural network, there are multiple different types and classes of neural networks that we unfortunately do not have the time to touch upon. 
