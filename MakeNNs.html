@@ -45,6 +45,14 @@
          width: 1200px;
          height: 380px;
         }
+
+        hr.new2{
+          text-align:center;
+          width: 1210px;
+        }
+        .source{
+          margin: auto;
+        }
         </style>
     
 </head>
@@ -58,7 +66,8 @@
         <a href="Refs.html#refs">Acknowledgements/Further Resources</a>
     </div>
 <section id="mainDiv">
-    <h1 id="headline"> -How to start making your own ANNs- </h1>
+    <h1 id="headline"> How to start making your own ANNs </h1>
+    <hr class = "new2">
     <div id= "MainWrapper">
         <p id="pBox1"> 
           Making your own artificial intelligence is actually a lot easier than one might think! 
@@ -69,10 +78,10 @@
           <br>
           Next, you have to decide how many variables you want the AI to consider and make a corresponding number of weights for your AI to adjust. The way your perceptron gets trained is by giving it a training set to learn from and it will adjust its weights accordingly. 
           <br>
-          This is the algorithm that it uses to predict an outcome: <br> y = f(b + w1*x1 + w2*x2 …. wn*xn). <br>
+          This is the algorithm that it uses to predict an outcome: <br>  y = f(b + w1*x1 + w2*x2 …. wn*xn). <br>
           Where f is the activation function, the b is the bias, which helps the perceptron more consistent, the w’s are the weights that get adjusted, and the x’s are the data input. 
           <br> 
-          When training your perceptron, you run through that algorithm and for every outcome the AI gets wrong, you update all the weights by using this function: <br> w + learningRate * (actualY-predictedY) * x <br>
+          When training your perceptron, you run through that algorithm and for every outcome the AI gets wrong, you update all the weights by using this function: <br> w + learningRate * (actualY-predictedY) * x  <br>
           Then, you update the bias using this function: <br> b + learningRate * (actualY-predictedY) <br>
           <br>The learning rate is a number that you decide based on the data you are dealing with. It should be low enough to be able to adjust your weights accordingly. If you run through enough iterations, you should get to a high enough accuracy that will be able to predict new data you give it. An artificial neural network is essentially a more complex perceptron that deals with much more data and inputs. 
            </p>
