@@ -57,9 +57,12 @@
 <!--Title and Introduction Section-->
 <section>
   <h1 id ="intro">A Look Behind The Curtain</h1>
-  <p>Intro Hook
-     Neural Networks are inspired by the human brain, A computer learns to make more intelligent
-     decisions by using interconnected nodes in a layer structure resembling the neuron structures in the human brain.
+  <p>
+    "Birds inspired us to fly, burdock plants inspired velcro, and countless more inventions were inspired by nature. It seems only logical, then, to look at the brain's
+    architecture for inspiration on how to build an intelligent machine." - Aurelion Geron.
+    <br>
+    This is the key idea behind the innovation known as ANNs or Artificial Neural Networks.
+ 
 
   </p>
 </section>
@@ -67,43 +70,26 @@
 <section>
 
   <!--Explanation on how some ANNS work (Likely Brief)-->
-  <h1 id="background">How ANNs work</h1>
-  <p>paragraphparagraphparagraphparagraphparagraphparagraphparagraphparagraphparagraphparagraph
-    paragraphparagraphparagraphparagraphparagraphparagraphparagraphparagraphparagraphparagraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-  </p>
-
-  <!--The structures of ANNs-->
-  <h1 id="structure">The structures of ANNs</h1>
-  <p>
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
+  <h1 id="background">Background on how ANNS work</h1>
+  <p>The first documented case of this innovation being advanced upon was when the forefathers of Neural Networks: Warren McCulloch and Walter Pitts proposed a very simple artificial neuron. 
+    This artificial neuron consisted of one or more binary (on/off) inputs and one binary output. The output of the neuron operates when enough of its inputs are triggered. 
+    Even with such a simple neuron model it is possible to perform some logical computations:
+    <!--INSERT PIC-->
+    <br>
+    Seeing how this is a neuron from the mid 1950s it’s natural for the current artificial neurons to have improved. 
+    Generally artificial neurons add together the values of its inputs and if this value is above a threshold it sends its own signal to its output which is further received by other neurons
+    <br>
+    The neuron doesn’t need to treat its inputs equally and can assign each a weight for which ones it values more or which value it doesn’t value by assigning it a negative weight. 
+    Each neuron is connected with other neurons whose values are weighted, strengthening or weakening the signals going through the neural network.
+    <br>
+    Typically the training process involves adjusting the weight values so that the final product of the network is correct. 
+    Usually this is in the form of using a method known as Gradient Descent. 
+    To explain in the a vague but easy to understand way basically a neural network makes small changes to weights and biases to create small improvements and keeps doing this until it can’t improve anymore:
+    <!--INSERT PIC-->
+    <br>
+    In short, ANNS are a stack (group/chain) of simple learning algorithms (neurons) that  process the input, and then produce an output. 
+    This embodies the idea of deep learning by design, as each layer of neurons learns a more refined understanding of the input.
+    <br>
   </p>
 
   <!--Interactive Perceptron-->
@@ -228,17 +214,40 @@
   <!--Multilayering-->
   <h1 id="layering">Multilayer ANNs</h1>
   <p>
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
+    While linear problems are no problem for a single-layer perceptron the performance of the perceptron on more complex non-linear problems was a huge roadblock for the advancement of ANNs. 
+    To solve these more complex problems a neural network needs more than just one layer of neurons. The multiple layers added are referred to as “hidden” layers, since it does not constitute the input or output layer. 
+    When an ANN has a large amount of hidden layers it’s called a “Deep Neural Network” hence the field of Deep Learning involves these ANNs.
+    <br>
+    What makes implementing multilayer neural networks more challenging is that these networks require much more than a simple gradient descent algorithm to train its weights. 
+    What finally got the development of Neural Networks over this hump was the introduction of a “backpropagation algorithm”. As Aurelion Geron in Hands-On Machine Learning describes it “in short it is simply Gradient Descent using an efficient technique to compute the gradients automatically” in regards to every single model parameter. 
+    <br>
+    This algorithm involves one training set at a time and it sends the full training set multiple times to the first hidden layer. 
+    The Algorithm then computes the output of all the neurons in this layer and passes it onto the next layer until it reaches the output layer 
+    This is referred to as a forward pass which is just like making predictions but preserving all results at every step to use it in the second step: the backwards pass.
+    <br>
+    Next the algorithm measures the error of the process using a loss function. 
+    Then it computes how much each output connection contributed to this error by applying the chain rule. The chain rule is from calculus and refers to finding the derivative of a composite function. 
+    <br>
+    The next step involves measuring how much error contribution came from each connection at a lower layer using the chain rule until the algorithm reaches the input layer. This backwards pass method efficiently measures the error gradient across all connection weights by using error gradient backward through the network.
+    Finally the algorithm performs a gradient descent step to change all the weights in the network using the error gradients. 
+    <br>
+    CREDIT to Aurelion Geron’s explanation of backpropagation in a relatively simple way.
+    If you want to see a much better explanation of backpropagation but in a much more complex way here is an article for you.
+    <!--INSERT LINK-->
+    <br>
+    Now with a way to properly train weights implementing a multilayer neural network is possible and viable.
   </p>
 
-
+  <!--Last Addition-->
+  <h1 id="other">Other Neural Networks</h1>
+  <p>
+    Before you're done learning about the basics of Neural Networks we felt it was valueable to at least introduce some other neural networks to you
+    <br>
+    Everything from this page mostly refers to a “feed-forward” type neural network, there are multiple different types and classes of neural networks that we unfortunately do not have the time to touch upon. 
+    However we feel there are two other classes of Neural Networks that are worth touching upon, Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs).
+    Here’s a graph from the Levity.ai blog that helps illustrate some differences between regular ANNs, CNNs, and RNNS:
+    <!--INSET PIC-->
+  </p>
 
 </section>
 
