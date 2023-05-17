@@ -12,7 +12,7 @@
         }
 
         h1{
-          position:relative; left: 80px
+          text-align: center
         }
 
         #imgcenter{
@@ -28,6 +28,18 @@
         hr.new2{
           text-align:center;
           width: 1210px;
+        }
+
+        tr{
+          text-align:center;
+        }
+        
+        .center{
+          margin: auto;
+        }
+
+        .container{
+          text-align: center;
         }
 
         .topnav {
@@ -83,7 +95,7 @@
          background: #bdbdbd;
          padding: 10px; 
          width: 1200px;
-         height: 300px;
+         height: 350px;
         }
         #pBox5 {
          position:relative; left: 80px;
@@ -222,7 +234,7 @@
     
   </p>
     <!--PERCEPTRON SECTION-->
-    <table>
+    <table class="center">
       <tr><!--ROW1 for week/day and days header-->
         <th>Week/Day</th>
         <th>Monday</th>
@@ -259,7 +271,7 @@
 
     <!--Button Section-->
     <div id="robot"></div>
-    <form>  
+    <form class="container">  
       <input type="button" value="Create Perceptron" onclick="start()"/> 
       <input type="button" value="250 Iterations" onclick="iterate()"/> 
     </form>  
@@ -272,32 +284,28 @@
     <div id='weights'></div><!--Display the weights-->
     <div id='accuracy'></div><!--Display the accuracy-->
     <!-- Insert The perceptron model above -->
-    <hr class = "new2">
     <p id= "pBox4">
       How does this perceptron model work? 
+      <br>
         As you can see this perceptron model has four binary inputs (X1,X2,X3,X4)
-        
-        X1 representing the Overcast of the day has a range of -2 - 1 where -2 is lightning storm, -1 is a rainstorm, 0 is cloudy and 1 is sunny
-        X2 is pretty self-explanatory representing Temperature in Fahreheit
-        X3 is the Windyness of the day with a range of 1 - 3 with 1 representing 0-10 mph, 2 representing 11-20 mph windspeed and 3 representing Windspeed over 21 mph
-        X4 represents the amount of precipitation expected in millimeters. 
+        <br>
+        X1: The Overcast of the Day, Range:[-2 to 1] where -2 is lightning storm, -1 is a rainstorm, 0 is cloudy and 1 is sunny <br>
+        X2: The Average Temperature of the Day in Fahreheit <br>
+        X3: The Average Windyness of the Day with a Range:[1 to 3] where 1 represents a 0-11 mph, 2 representing 12-22 mph windspeed and 3 representing Windspeed over 22 mph <br>
+        X4: The Average Amount of Precipitation expected in millimeters <br> <br>
 
-        with 0 representing no and 1 representing yes it is nice enough to take a walk.
-
-
-      <! Write about how we just made a computer basically do the same calculations we do when we wake up and look at the weather app and decided whether it's going to be a nice day or not
-    <br>paragraph
-    <br>paragraph
-    <br>paragraph
-    <br> While the perceptron is very simple and decent at classification it still has many problems solving some simple problems.
-         Take the Exclusive OR classification problem for example. 
-         Picture of the problem here. 
-         A Single layer Perceptron can not solve this problem.
-         However some of the limitations of a Single-layer Perceptron are fixed by stacking multiple perceptrons resulting in 
-         Multi-layer (MLP). A MLP for example can solve the Exclusive OR Problem by.
-    <br>paragraph
-    <br>paragraph
-    <br> Moving onto multi-layering
+        The y-hat and y values of either 0 or 1 represents "No it's not nice enough to take a walk outside" 
+        and "Yes it's nice enough to take a walk outside" respectively.
+        <br> <br>
+        Each of its inputs has a weight associated with it and there is also a bias value inplace too. 
+        <br> For every iteration it measures the accuracy of the model and uses the gradient descent method to tweak the weights to get a better accuracy
+        <br> <br>
+        Around 22000 the model is 100% accurate to the training set. <br>
+        Typically the training set should be much larger than 14 sets of data so the model can give more accurate predictions.
+        <br> <br>
+        Even if this neural network is incredibly simple it's still extremely cool as we basically trained a model 
+        to emulate the same calculations we do when we wake up and look at the weather app.
+      
   </p>
 
   <!--Multilayering-->
