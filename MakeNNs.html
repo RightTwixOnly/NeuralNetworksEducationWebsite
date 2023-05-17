@@ -47,8 +47,11 @@
 <section id="mainDiv">
     <h1 id="headline"> -How to start making your own ANNs- </h1>
     <div id= "MainWrapper">
-        <h2 id="headline_h2">Intro</h2>
-        <p id="paragraph"> Hello Hayden Jones </p>
+        <p id="paragraph"> 
+          Making your own artificial intelligence is actually a lot easier than one might think! One of the most basic forms of artificial intelligence is a perceptron which is just a series of weights and bias that get adjusted based on the training you give it. First, you must decide what your “activation function” is, basically what you want your AI to do. In our example on how they work, the activation function is whether it is a nice enough day to go on a walk or not. Next, you have to decide how many variables you want the AI to consider and make a corresponding number of weights for your AI to adjust. The way your perceptron gets trained is by giving it a training set to learn from and it will adjust its weights accordingly. This is the algorithm that it uses to predict an outcome: y = f(b + w1*x1 + w2*x2 …. wn*xn). Where f is the activation function, the b is the bias, which helps the perceptron more consistent, the w’s are the weights that get adjusted, and the x’s are the data input. When training your perceptron, you run through that algorithm and for every outcome the AI gets wrong, you update all the weights by using this function: w + learningRate * (actualY-predictedY) * x
+          <br>Then, you update the bias using this function: b + learningRate * (actualY-predictedY)
+          <br>The learning rate is a number that you decide based on the data you are dealing with. It should be low enough to be able to adjust your weights accordingly. If you run through enough iterations, you should get to a high enough accuracy that will be able to predict new data you give it. An artificial neural network is essentially a more complex perceptron that deals with much more data and inputs. 
+           </p>
     </div>
 </section>
 
